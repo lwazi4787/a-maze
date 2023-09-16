@@ -37,6 +37,7 @@
             @error('img')
               <small id="emailHelp" class="form-text text-danger">{{$message}}</small>
             @enderror<br>
+            <input type="hidden" name="user_id" value="{{Auth::user()->id}}">
             <button type="submit" class="btn btn-primary">Submit</button>
           </form>
         </div>

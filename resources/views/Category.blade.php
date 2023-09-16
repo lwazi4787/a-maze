@@ -1,7 +1,12 @@
 @extends('layouts.layout')
 @section('content')
-<h3 class="display-4">All {{$category}} articles</h3><br><br>
-  
+
+@if(!empty($articles))
+  <h3 class="display-4">All {{$category}} articles</h3><br><br>
+@else
+  <h3 class="display-4">No Articles Yet</h3>
+@endif
+
   @if(session()->has('message'))
 
         <div class="alert alert-success">

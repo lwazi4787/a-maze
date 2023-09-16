@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\articlesController;
 use App\Http\Controllers\userController;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,6 +22,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [articlesController::class, 'index']);
 
+Route::get('/link', function () {
+    Artisan::call('storage:link');
+});
 
 //Article Controller Routes
 Route::get('/articles', [articlesController::class, 'articles']);

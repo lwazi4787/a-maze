@@ -439,6 +439,10 @@
             margin-left: 0em;
             margin-top: 1em;
           }
+          .mobile-none
+          {
+            display: none;
+          }
           .mobile-only
           {
             display: block;
@@ -496,7 +500,7 @@
         <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
         @auth
           <li><a class="nav-link scrollto" href="/articles/create">Add Article</a></li>
-          <li style="margin-left: 2em;" class="text-warning"><b>Welcome {{auth()->user()->name}}</b></li>
+          <li style="margin-left: 2em;" class="text-warning mobile-none"><b>Welcome {{auth()->user()->name}}</b></li>
           <form method="post" action="/logout">@csrf<li><input type = 'submit' value = 'Logout' class="getstarted scrollto" href="/articles/create" style="background: rgba(255, 255, 255, 0); cursor: pointer;"></li></form>
         @else
           <li><a class="getstarted scrollto" href="/register">Register</a></li>
@@ -517,7 +521,7 @@
         </div>
 
         <div class="col-md-6">
-            <img src="img/Making art-cuate.png" class="hero-img">
+            <img src="img/Making art-cuate.png" class="mobile-none hero-img">
         </div>
     </div>
   </main>

@@ -9,7 +9,7 @@
 
   @endif
   
-  <h3 class="display-4">Register</h3><br><br>
+  <h3 class="display-4">Login</h3><br><br>
   <div class="row">
       <div class="col-md-12">
         <div class="outer-form">

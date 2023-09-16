@@ -9,19 +9,23 @@
 
 
 
-       @auth <div class="row">
-            <div class="col-md-10">
-                <a type="button" class="btn btn-warning btn-sm btn-outline-secondary" href="/articles/{{$article->id}}/edit">Edit</a>
-            </div>
+       @auth
+          @if(Auth::user()->id == $article->user_id) 
+         <div class="row">
+              <div class="col-md-10">
+                  <a type="button" class="btn btn-warning btn-sm btn-outline-secondary" href="/articles/{{$article->id}}/edit">Edit</a>
+              </div>
 
-            <div class="col-md-2">
-                <form method="post" action="{{$article->id}}/delete">
-                    @csrf
-                    @method('delete')
-                    <input type="submit" class="btn btn-warning btn-sm btn-outline-secondary" value="Delete">
-                </form>
-            </div>
-        </div> @endauth
+              <div class="col-md-2">
+                  <form method="post" action="{{$article->id}}/delete">
+                      @csrf
+                      @method('delete')
+                      <input type="submit" class="btn btn-warning btn-sm btn-outline-secondary" value="Delete">
+                  </form>
+              </div>
+          </div>
+          @endif 
+        @endauth
       </div>
 
       <div class="col-md-4 mobile-none">

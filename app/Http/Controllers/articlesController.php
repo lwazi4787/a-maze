@@ -39,7 +39,8 @@ class articlesController extends Controller
             'Title' => 'required',
             'Description' => 'required',
             'Category' => 'required',
-            'img' => 'required'
+            'img' => 'required',
+            'user_id' => 'required'
         ]);
 
 

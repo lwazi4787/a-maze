@@ -33,7 +33,7 @@
 
             <div class="form-group">
               <label for="exampleInputEmail1">Cornfirm password</label>
-              <input type="password" class="form-control" placeholder="User name" name="password_confirmation" value="{{old('password_confirmation')}}">
+              <input type="password" class="form-control" placeholder="Cornfirm password" name="password_confirmation" value="{{old('password_confirmation')}}">
               @error('password_confirmation')
                 <small id="emailHelp" class="form-text text-danger">{{$message}}</small>
               @enderror
